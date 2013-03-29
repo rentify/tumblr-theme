@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lte-ie8"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7 lte-ie8"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8 lte-ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width" />
+    <meta name='text:Disqus Shortname' content='' />
+	<title>{Title}{block:TagPage} &bull; Posts Tagged &lsquo;{Tag}&rsquo;{/block:TagPage}{block:PostSummary} &bull; {PostSummary}{/block:PostSummary}</title>
+	{block:Description}
+	<meta name="description" content="{MetaDescription}"/>
+	{/block:Description}
+
+	<meta name="color:Background" content="#d4d4d4"/>
+	<meta name="color:Colored Area Text" content="#fffadc"/>
+	<meta name="color:Colored Area Text Shadow" content="#bf4402"/>
+	<meta name="color:Inside Link" content="##00a2c4"/>
+	<meta name="color:Main Theme" content="#00a2c4"/>
+	<meta name="color:Outside Link" content="#00a2c4"/>
+	<meta name="color:Outside Link Hover" content="#00a2c4"/>
+	<meta name="color:Outside Text" content="#00a2c4"/>
+	<meta name="font:Inside Heading" content="Helvetica Neue, Arial, sans-serif"/>
+	<meta name="font:Inside Text" content="Georgia, serif"/>
+	<meta name="font:Outside Heading" content="Helvetica Neue, Arial, sans-serif"/>
+	<meta name="font:Outside Text" content="Helvetica Neue, Arial, sans-serif"/>
+	<meta name="image:Background" content=""/>
+	<meta name="image:Banner" content=""/>
+	<meta name="image:Large Sidebar Portrait" content=""/>
+	<meta name="image:Logo" content=""/>
+	<meta name="if:Align Top Menu Left" content="0"/>
+	<meta name="if:Automatic Headings" content="0"/>
+	<meta name="if:Blog Title in Page Header" content="0"/>
+	<meta name="if:Blog Title in Sidebar" content="0"/>
+	<meta name="if:Blog Title in Top bar" content="1"/>
+	<meta name="if:Centered Layout" content="1"/>
+	<meta name="if:Collapse Notes" content="1"/>
+	<meta name="if:Featured Posts" content="0"/>
+	<meta name="if:Fixed Background" content="0"/>
+	<meta name="if:Fixed Top Bar" content="1"/>
+	<meta name="if:Hide Sidebar" content="0"/>
+	<meta name="if:Infinite Scrolling" content="0"/>
+	<meta name="if:Large Social Icons" content="1"/>
+	<meta name="if:Left Sidebar" content="0"/>
+	<meta name="if:Logo in Top bar" content="0"/>
+	<meta name="if:Pages In Top Bar" content="0"/>
+	<meta name="if:Rounded Post Corners" content="0"/>
+	<meta name="if:Scale Images" content="1"/>
+	<meta name="if:Search Box In Sidebar" content="0"/>
+	<meta name="if:Show About Heading" content="1"/>
+	<meta name="if:Show Blogs I Follow" content="0"/>
+	<meta name="if:Show Description" content="1"/>
+	<meta name="if:Show Group Blog Info" content="0"/>
+	<meta name="if:Show Likes" content="0"/>
+	<meta name="if:Show Likes in Sidebar" content="0"/>
+	<meta name="if:Show Pages Heading" content="1"/>
+	<meta name="if:Show Portrait" content="0"/>
+	<meta name="if:Show Random Post Icon" content="0"/>
+	<meta name="if:Show Social Icons Widget" content="0"/>
+	<meta name="if:Show Tweets" content="1"/>
+	<meta name="if:Show Twitter Profile" content="1"/>
+	<meta name="if:Top Menu With Labels" content="0"/>
+	<meta name="text:Copyright Text" content=""/>
+	<meta name="text:Default Search Text" content="Search"/>
+	<meta name="text:Disqus Shortname" content=""/>
+	<meta name="text:Facebook Username" content=""/>
+	<meta name="text:Flickr Username" content=""/>
+	<meta name="text:Google Analytics Web Property ID" content=""/>
+	<meta name="text:Google URL" content=""/>
+	<meta name="text:Liked Posts Heading" content="I Dig These Posts"/>
+	<meta name="text:Linkedin Profile URL" content=""/>
+	<meta name="text:Num Tweets Max 4" content="4"/>
+	<meta name="text:Pinterest Username" content=""/>
+	<meta name="text:Rows of Followed Avatars" content="3"/>
+	<meta name="text:Social Icons Heading" content="Rentify Elsewhere"/>
+	<meta name="text:Tagline" content=""/>
+	<meta name="text:Twitter Heading" content="Twitter"/>
+	<meta name="text:Twitter Username" content=""/>
+	<meta name="text:Vimeo Username" content=""/>
+	<meta name="text:Youtube Username" content=""/>
+	<meta name="text:github Username" content=""/>
+	<meta name="text:Featured Post HTML" content=""/>
+	<meta property="og:site_name" content="{Title}"/>
+
+	{block:PermalinkPage}
+
+		<meta property="og:url" content="{Permalink}"/>
+		<meta property="og:type" content="article"/>
+
+			{block:Posts}
+				{block:Text}
+					{block:Title}<meta property="og:title" content="{PlaintextTitle}"/>{/block:Title}
+					<meta property="og:description" content="{PlaintextBody}"/>
+				{/block:Text}
+			{/block:Posts}
+
+	{/block:PermalinkPage}
+
+	{block:IndexPage}
+			<meta property="og:title" content="{Title}"/>
+			<meta property="og:type" content="blog"/>
+			<meta property="og:description" content="{MetaDescription}"/>
+			<meta property="og:image" content="{PortraitURL-64}"/>
+	{/block:IndexPage}
+
+
+	<link rel="shortcut icon" href="{Favicon}" />
+	<link rel="apple-touch-icon" href="{PortraitURL-128}" />
+	<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/hugxd2w/9DOma0c1t/style.min.css" media="screen"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/MF5lbpkr4/jquery.fancybox-1.3.1.css" media="screen"/>
+
+	{block:IndexPage}<script src="http://assets.tumblr.com/javascript/tumblelog.js?16"></script>{/block:IndexPage}
+	<script type="text/javascript">
+        var showInstagram = false;
+		var tumblrUsername = '{PlaintextName}';
+		var searchValue = "{text:Default Search Text}";
+		var themeColor = "{color:Main Theme}";
+		var contentWidth = 700;
+		{block:IndexPage}{block:IfInfiniteScrolling}infiniteScroll = true;{/block:IfInfiniteScrolling}{/block:IndexPage}
+		{block:IfCollapseNotes}collapseNotes = true;{/block:IfCollapseNotes}
+		var twitterUsername = "{block:Twitter}{TwitterUsername}{/block:Twitter}";
+		{block:IfFixedTopBar}fixedBar = true;{/block:IfFixedTopBar}
+	{block:IfShowTweets}{block:Twitter}
+		var showTweets = true;
+		{block:IfNumTweetsMax4}numTweets = parseInt({text:Num Tweets Max 4});{/block:IfNumTweetsMax4}
+		{block:IfShowTwitterProfile}showTwitterProfile = true;{/block:IfShowTwitterProfile}
+	{/block:Twitter}{/block:IfShowTweets}
+	{block:IfShowBlogsIFollow}
+	{block:Following}
+		var showFollowing = true;
+		{block:IfRowsOfFollowedAvatars}followedRows = parseInt({text:Rows Of Followed Avatars});{/block:IfRowsofFollowedAvatars}
+	{/block:Following}
+	{/block:IfShowBlogsIFollow}
+		{block:IfShowLikes}{block:Likes}showLikes = true;{/block:Likes}{/block:IfShowLikes}
+		{block:PermalinkPage}isPermalink = true;{/block:PermalinkPage}
+	</script>
+	<style type="text/css">
+		 body { font-family:{font:Outside Text}; color:{color:Outside Text}; background-color:{color:Background};{block:IfBackgroundImage}background-image:url({image:Background}); background-repeat:repeat;{block:IfFixedBackground} background-attachment:fixed;{/block:IfFixedBackground}{/block:IfBackgroundImage} }
+		.blog-title, #sidebar h1, #sidebar h2, #sidebar h3, #footer h1, #footer h2, #footer h3  { font-family:{font:Outside Heading}; }
+		.copy { font-family:{font:Inside Text}; }
+		.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .auto-headings .copy p:first-child strong:first-child, #notes h2, #disqus h2, .speaker {font-family:{font:Inside Heading};}
+
+		#tabs #tabs-nav h2 span.active { background:{color:Background}; }
+
+		/* Main Theme Color */
+		.colored-panel, .type-answer .user-question, .pages a:hover, .fixed .pages a:hover, .pinned .pages a:hover, #sidebar .pages a:hover, .more-likes:hover, .fixed .pages a:hover, .like_link a:hover, .type-photoset .navi a:hover, #pagination .nextprev a:hover, #group-members li span, #followed li span { background-color:{color:Main Theme}; }
+		.corners .tl { border-left-color:{color:Main Theme}; }
+		.corners .tr { border-right-color:{color:Main Theme}; }
+		.corners .bl, .corners .br { border-bottom-color:{color:Main Theme}; }
+		#group-members li span:after, #followed li span:after { border-top-color:{color:Main Theme}; }
+
+		/* Outside Link Color */
+		a, #footer-end a:hover { color:{color:Outside Link}; }
+
+		/* Outside Link Hover */
+		a:hover { color:{color:Outside Link Hover}; }
+
+		/* Inside Link Color */
+		.copy a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #disqus a { color:{color:Inside Link}; }
+		.copy a:hover, ol.notes a:hover { border-color:{color:Inside Link}; }
+		#notes-toggle:hover .icon, .photo-btns a:hover { background-color:{color:Inside Link}; }
+
+		/* Colored Area */
+		.colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .fixed .pages a:hover, #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover, #group-members li span, #followed li span { color:{color:Colored Area Text}; }
+
+		/* Colored Area Text Shadow */
+		.type-quote .quote-text,.type-audio .audio-meta,.type-answer .user-question,.pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover, #group-members li span, #followed li span { text-shadow:1px 1px {color:Colored Area Text Shadow}; }
+
+		ol.notes li.tumblelog_{PlaintextName} { background-color:#fbfbfb; }
+		ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
+		#page, .inner { margin:{block:IfCenteredLayout}0 auto{/block:IfCenteredLayout}{block:IfNotCenteredLayout}0 0 0 40px{/block:ifNotCenteredLayout}; }
+
+		{CustomCSS}
+	</style>
+        <!-- begin sharethis code -->
+  <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'ffb00428-09a4-4895-aae7-979bc4ed90b0'});</script>
+        <!-- end sharethis code -->
+
+	<script src="http://static.tumblr.com/hugxd2w/6Cpm8gh20/modernizr.2.6.1.min.js"></script>
+</head>
+<body class="content-700 {block:IndexPage}{block:IfInfiniteScrolling}infscroll {/block:IfInfiniteScrolling}{/block:IndexPage}{block:IfTopMenuWithLabels}menu-labels {/block:IfTopMenuWithLabels}{block:IfAlignTopMenuLeft}menu-left {/block:IfAlignTopMenuLeft}{block:IfRoundedPostCorners}round-corners {/block:IfRoundedPostCorners}{block:IfLargeSocialIcons}lg-icons {/block:IfLargeSocialIcons}{block:IfAutomaticHeadings}auto-headings {/block:IfAutomaticHeadings}{block:IfScaleImages}scale-images {/block:IfScaleImages}{block:PermalinkPage}singular {/block:PermalinkPage}{block:IfHideSidebar}hide-sidebar
+{/block:IfHideSidebar}">
+	<div id="header" class="pinned">
+		<div class="inner">
+			{block:IfLogoInTopBar}
+				{block:IfLogoImage}<a href="/" title="{Title}" class="logo"><img src="{image:Logo}" alt="Logo" /></a>{/block:IfLogoImage}
+			{/block:IfLogoInTopBar}
+
+			{block:IfNotBlogTitleInPageHeader}
+			<h1 class="blog-title{block:IfNotBlogTitleInTopBar} hidden{/block:IfNotBlogTitleInTopBar}"><a href="/">{Title}</a></h1>
+			{/block:IfNotBlogTitleInPageHeader}
+
+			{block:IfPagesInTopBar}
+			{block:HasPages}
+			<ul class="pages">
+				{block:Pages}
+				<li><a href="{URL}">{Label}</a></li>
+				{/block:Pages}
+			</ul>
+			{/block:HasPages}
+			{/block:IfPagesInTopBar}
+
+			{block:IfNotSearchBoxInSidebar}
+			<div id="search">
+				<form id="search-form" method="get" action="/search">
+					<span class="left"></span>
+					<input type="text" name="q" value="{block:IfDefaultSearchText}{text:Default Search Text}{/block:IfDefaultSearchText}" />
+					<span class="right"></span>
+				</form>
+			</div>
+			{/block:IfNotSearchBoxInSidebar}
+			<ul class="menu">
+ 				{block:IfShowRandomPostIcon}<li><a class="random" href="/random"{block:IfNotTopMenuWithLabels} title="{lang:Random post}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{lang:Random}</span></a></li>{/block:IfShowRandomPostIcon}
+				<li><a class="archives" href="/archive"{block:IfNotTopMenuWithLabels} title="Archive"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{lang:Archive}</span></a></li>
+				<li><a class="rss" href="{RSS}"{block:IfNotTopMenuWithLabels} title="{lang:RSS feed}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{lang:RSS}</span></a></li>
+				{block:AskEnabled}<li><a class="ask" href="/ask"{block:IfNotTopMenuWithLabels} title="{AskLabel}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{AskLabel}</span></a></li>{/block:AskEnabled}
+				{block:SubmissionsEnabled}<li><a class="submit" href="/submit"{block:IfNotTopMenuWithLabels} title="{SubmitLabel}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{SubmitLabel}</span></a></li>{/block:SubmissionsEnabled}
+			</ul>
+		</div><!-- .inner -->
+		<div class="shadow"><span></span></div>
+	</div><!-- /#header -->
+
+	<!-- PAGE -->
+	<div id="page" class="{block:IfLeftSidebar}left-sidebar{/block:IfLeftSidebar}{block:IfNotLeftSidebar}right-sidebar{/block:IfNotLeftSidebar} clearfix">
+		{block:IfBannerImage}
+		<div class="banner">
+			<a href="/"title="{Title}"><img id="banner" src="{image:Banner}" alt="banner"/></a>
+		</div>
+		{block:IfBannerImage}
+		{block:IfNotBannerImage}
+		{block:IfBlogTitleInPageHeader}
+		<div class="banner textual">
+			<h1 class="blog-title"><a href="/">{Title}</a></h1>
+			{block:IfTagline}<p class="tagline">{text:Tagline}</p>{/block:IfTagline}
+		</div>
+		{/block:IfBlogTitleInPageHeader}
+		{/block:IfNotBannerImage}
+		<div id="content">
+			<!-- BEGIN POSTS -->
+			{block:Posts}
+			<article id="post-{postID}" class="post {block:Text}type-text {/block:Text}{block:Tags}tag_{URLSafeTag} {/block:Tags}">
+				{block:Text}
+				<div class="post-panel">
+					<div class="copy">
+						{block:Title}<a href='{Permalink}'><h2 class="post-title">{Title}</h2></a>{/block:Title}
+						{Body}
+                        <!-- begin sharethis -->
+                        Sharing is caring - <span st_url='{Permalink}' st_title='{Title}' class='st_facebook_hcount' displayText='Facebook'></span><span st_url='{Permalink}' st_title='{Title}' class='st_twitter_hcount' displayText='Tweet'></span><span st_url='{Permalink}' st_title='{Title}' class='st_linkedin_hcount' displayText='LinkedIn'></span><span st_url='{Permalink}' st_title='{Title}' class='st_googleplus_hcount' displayText='Google  '></span><span st_url='{Permalink}' st_title='{Title}' class='st_fblike_hcount' displayText='Facebook Like'></span><br /><br />
+                        <!-- end sharethis -->
+                        {block:IfDisqusShortname}
+                            {block:PermalinkPage}
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript">
+                                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                var disqus_shortname = '{text:Disqus Shortname}'; // required: replace example with your Disqus site shortname
+                                var disqus_url = '{Permalink}';
+                                var disqus_title = '{block:PostTitle}{PostTitle}{/block:PostTitle}';
+
+                                /* * * DON'T EDIT BELOW THIS LINE * * */
+                                (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                            {/block:PermalinkPage}
+                        {/block:IfDisqusShortname}
+					</div>
+                {/block:Text}
+                {block:ContentSource}
+                <div class="copy source">
+                    <p>{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></p>
+                </div>
+                {/block:ContentSource}
+                {block:Date}
+                <div class="meta">
+                    <ul class="meta-list">
+                        {block:HasTags}
+                        <li class="tags">
+                            <ul class="tag-list">
+                                {block:Tags}
+                                <li><a href="{TagURL}">#{Tag}</a></li>
+                                {/block:Tags}
+                            </ul>
+                        </li>
+                        {/block:HasTags}
+                        {block:IfShowGroupBlogInfo}<li class="post-author"><img alt="{PostAuthorName} Avatar" src="{PostAuthorPortraitURL-16}"> Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a></li>{/block:IfShowGroupBlogInfo}
+                        <li class="date{block:RebloggedFrom}-reblogged{/block:RebloggedFrom}"><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}"><span class="icon"></span>{TimeAgo}</a>{block:RebloggedFrom} <em>&gt;</em> <a class="reblogged-from" href="{ReblogRootURL}" title="{ReblogRootTitle}">{ReblogRootName}</a>{/block:RebloggedFrom}</li>
+                        {block:NoteCount}<li class="notes"><a href="{Permalink}#notes"><span class="icon"></span>{NoteCount}</a></li>{/block:NoteCount}
+                        {block:IfDisqusShortname}<li class="comments hidden"><a id="dsq-{PostID}" href="{Permalink}#disqus_thread"><span class="icon"></span>Comments</a></li>{/block:IfDisqusShortname}
+                        <li class="permalink"><a href="{Permalink}"><span class="icon"></span>{lang:Permalink}</a></li>
+                    </ul><!--/.meta-list -->
+                    <div class="share">
+                        <span class="toggle">Share</span>
+                        <div class="widget">
+                            <div class="short-link">
+                                <p>{lang:Short URL}<br>
+                                    <input type="text" readonly="" value="{ShortURL}"></p>
+                            </div>
+                            <div class="share-links"><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="share-twitter">Twitter</a><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}&t={Title}{/block:Title}" class="share-facebook">Facebook</a><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}&media=" class="share-pinterest">Pinterest</a><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}" class="share-google">Google+</a></div>
+                        </div>
+                    </div>
+                </div><!-- /.meta -->
+                {/block:Date}
+                {block:PermalinkPage}
+                {block:NoteCount}
+                <div id="notes">
+                    <h2>{NoteCount} Notes<span class="sep">/</span>
+                    <a id="notes-toggle" href="#"><span class="label">Hide</span><span class="icon up"></span></a></h2>
+                    {PostNotes}
+                </div><!-- /.notes -->
+                {/block:NoteCount}
+
+                {/block:PermalinkPage}
+
+                </div><!-- /.post-panel -->
+                <div class="post-shadow"></div>
+            </article><!-- /.post -->
+			{/block:Posts}
+			<!-- END POSTS -->
+
+			{block:NoSearchResults}
+				<div class="post type-text not-found">
+					<div class="post-panel">
+						<div class="copy">
+							<h2 class="post-title">{lang:Sorry no posts found}</h2>
+							<p>{lang:No search results for SearchQuery 2}</p>
+						</div>
+					</div>
+					<div class="post-shadow"></div>
+				</div>
+			{/block:NoSearchResults}
+
+			{block:Pagination}
+			<div id="pagination">
+				<div class="nextprev">
+					{block:PreviousPage}<a class="prev" href="{PreviousPage}">{/block:PreviousPage}<span>&larr; {lang:Newer}</span>{block:PreviousPage}</a>{/block:PreviousPage} <span class="sep">&bull;</span>
+					{block:NextPage}<a class="next" href="{NextPage}">{/block:NextPage}<span>{lang:Older} &rarr;</span>{block:NextPage}</a>{/block:NextPage}
+				</div>
+				<div class="current-page">{lang:Page CurrentPage of TotalPages 2}</div>
+			</div><!--/#pagination -->
+			{/block:Pagination}
+			{block:PermalinkPagination}
+			<div id="pagination">
+				<div class="nextprev">
+					{block:NextPost}<a class="prev" href="{NextPost}">{/block:NextPost}<span>&larr; {lang:Previous}</span>{block:NextPost}</a>{/block:NextPost} <span class="sep">&bull;</span>
+					{block:PreviousPost}<a class="next" href="{PreviousPost}">{/block:PreviousPost}<span>{lang:Next} &rarr;</span>{block:PreviousPost}</a>{/block:PreviousPost}
+				</div>
+			</div><!--/#pagination -->
+			{/block:PermalinkPagination}
+
+		</div><!-- /#content -->
+
+		{block:IfNotHideSidebar}<!-- SIDEBAR -->
+		<div id="sidebar">
+			<div id="blog-info" class="side-box">
+				{block:IfNotLogoInTopBar}
+					{block:IfLogoImage}<p><a href="/" title="{Title}"><img id="logo" src="{image:Logo}" alt="Logo" /></a></p>{/block:IfLogoImage}
+				{/block:IfNotLogoInTopBar}
+
+				{block:IfBlogTitleInSidebar}
+				<h1 class="blog-title"><a href="/">{Title}</a></h1>
+				{/block:IfBlogTitleInSidebar}
+
+				{block:IfLargeSidebarPortraitImage}
+				<p><a href="/"><img class="large-portrait" src="{image:Large Sidebar Portrait}" alt="Portrait/Logo"/></a></p>
+				{/block:IfLargeSidebarPortraitImage}
+
+				{block:IfShowDescription}
+				<div class="description">
+					{block:IfShowAboutHeading}<h2>{lang:About}</h2>{/block:IfShowAboutHeading}
+					{block:IfShowPortrait}<img class="portrait" src="{PortraitURL-64}" alt="Avatar"/>{/block:IfShowPortrait}
+					{Description}
+				</div><!--/.description-->
+				{/block:IfShowDescription}
+			</div><!--/#blog-info -->
+
+			{block:IfSearchBoxInSidebar}
+			<div id="search">
+				<form id="search-form" method="get" action="/search">
+					<span class="left"></span>
+					<input type="text" name="q" value="{block:IfDefaultSearchText}{text:Default Search Text}{/block:IfDefaultSearchText}" />
+					<span class="right"></span>
+				</form>
+			</div>
+			{/block:IfSearchBoxInSidebar}
+
+			{block:IfNotPagesInTopBar}
+			{block:HasPages}
+			<div class="side-box ruled-top">
+				{block:IfShowPagesHeading}<h2>{lang:Pages}</h2>{/block:IfShowPagesHeading}
+				<ul class="pages">
+					{block:Pages}
+					<li><a href="{URL}">{Label}</a></li>
+					{/block:Pages}
+				</ul>
+			</div>
+			{/block:HasPages}
+			{/block:IfNotPagesInTopBar}
+			{block:IfFeaturedPosts}
+			<p>Featured Posts: <br />
+                {text:Featured Post HTML}
+            </p>
+			{/block:IfFeaturedPosts}
+
+			{block:IfShowSocialIconsWidget}
+			<div class="side-box ruled-top">
+				{block:IfSocialIconsHeading}<h2>{text:Social Icons Heading}</h2>{/block:IfSocialIconsHeading}
+				<ul id="socialize">
+					{block:IfTwitterUsername}<li class="twitter"><a href="http://www.twitter.com/{text:Twitter Username}" target="_blank" title="@{text:Twitter Username} on Twitter">@{text:Twitter Username} on Twitter</a></li>{/block:IfTwitterUsername}
+					{block:IfFacebookUsername}<li class="facebook"><a href="http://www.facebook.com/{text:Facebook Username}" target="_blank" title="Facebook Profile">Facebook Profile</a></li>{/block:IfFacebookUsername}
+					{block:IfYoutubeUsername}<li class="youtube"><a href="http://www.youtube.com/{text:Youtube Username}" title="{text:Youtube Username} on Youtube">{text:Youtube Username} on Youtube</a></li>{/block:IfYoutubeUsername}
+					{block:IfFlickrUsername}<li class="flickr"><a href="http://www.flickr.com/photos/{text:Flickr Username}" title="{text:Flickr Username} on Flickr">{text:Flickr Username} on Flickr</a></li>{/block:IfFlickrUsername}
+					{block:IfPinterestUsername}<li class="pinterest"><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">{text:Pinterest Username} on Pinterest</a></li>{/block:IfPinterestUsername}
+					{block:IfGoogleURL}<li class="google"><a href="{text:Google URL}" title="Google">Google</a></li>{/block:IfGoogleURL}
+					{block:IfGithubUsername}<li class="github"><a href="http://github.com/{text:github Username}" target="_blank" title="{text:github Username} on github">{text:github Username} on github</a></li>{/block:IfGithubUsername}
+					{block:IfXboxLiveProfileURL}<li class="xbox"><a href="{text:Xbox Live Profile URL}" title="Xbox Live Profile">Xbox Live Profile</a></li>{/block:IfXboxLiveProfileURL}
+				</ul>
+			</div>
+			{/block:IfShowSocialIconsWidget}
+
+			<div id="tabs">
+				<div id="tabs-nav">
+					{block:IfShowTweets}{block:Twitter}<h2><span id="tab-twitter" class="active">{block:IfTwitterHeading}{text:Twitter Heading}{/block:IfTwitterHeading}{block:IfNotTwitterHeading}Twitter{block:IfNotTwitterHeading}</span></h2>{/block:Twitter}{/block:IfShowTweets}
+				</div>
+
+				{block:IfShowTweets}
+				{block:Twitter}
+				<div id="twitter" class="side-box tab">
+					<p class="loading-text">loading tweets&hellip;</p>
+				</div>
+				{/block:Twitter}
+				{/block:IfShowTweets}
+			</div><!-- close TABS -->
+
+			{block:IfShowGroupBlogInfo}{block:GroupMembers}
+			<div id="group-members" class="side-box ruled-top">
+				<h2>{lang:Group members}</h2>
+				<ul id="group-list">
+					{block:GroupMember}<li><a href="{GroupMemberURL}"><img alt="" src="{GroupMemberPortraitURL-24}"></a><span>{GroupMemberName}</span></li>{/block:GroupMember}
+				</ul>
+			</div><!-- close GROUP MEMBERS -->
+			{/block:GroupMembers}{/block:IfShowGroupBlogInfo}
+
+			{block:IfShowBlogsIFollow}
+			{block:Following}
+			<div id="followed" class="side-box ruled-top">
+	      <h2>{lang:Following}</h2>
+				<ul id="followed-list">
+					{block:Followed}<li><a href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-24}"></a><span>{FollowedName}</span></li>{/block:Followed}
+				</ul>
+	    </div><!-- close FOLLOWING -->
+			{/block:Following}
+			{/block:IfShowBlogsIFollow}
+
+			{block:IfShowLikes}
+			{block:IfShowLikesInSidebar}
+			<!-- LIKES -->
+			{block:Likes}
+			<div id="side-likes" class="side-box ruled-top">
+				<h2>{text:Liked Posts Heading}</h2>
+				{Likes limit="4" summarize="150" width="170"}
+				<a class="more-likes" href="/liked/by/{Name}">{lang:See more} &rarr;</a>
+			</div>
+			{/block:Likes}
+			<!-- END LIKES -->
+			{/block:IfShowLikesInSidebar}
+			{/block:IfShowLikes}
+
+		</div><!-- /#sidebar -->{/block:IfNotHideSidebar}
+
+		{block:IndexPage}{block:IfInfiniteScrolling}
+		<div id="back-to-top">Back to Top</div>
+		{/block:IfInfiniteScrolling}{/block:IndexPage}
+
+		<!-- FOOTER -->
+		<div id="footer">
+			{block:IfShowLikes}
+				{block:IfNotShowLikesInSidebar}
+				<!-- LIKES -->
+				{block:Likes}
+				<div id="likes-panel" class="footer-panel ruled-top">
+					<h2>{text:Liked Posts Heading}</h2>
+					<a class="more-likes" href="/liked/by/{Name}">{lang:See more} &rarr;</a>
+
+					{Likes limit="5" summarize="150" width="168"}
+				</div>
+				{/block:Likes}
+				<!-- END LIKES -->
+				{/block:IfNotShowLikesInSidebar}
+			{/block:IfShowLikes}
+			<div id="footer-end" class="ruled-top">
+				<ul id="footer-links">
+					<li><a href="/rss">{lang:RSS}</a></li>
+					<li><a href="/random">{lang:Random}</a></li>
+					<li><a href="/archive">{lang:Archive}</a></li>
+					{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+					{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+					<li><a href="/mobile">{lang:Mobile}</a></li>
+				</ul>
+				<p class="copyright">{block:IfCopyrightText}{text:Copyright Text}. {/block:IfCopyrightText}</p>
+			</div><!-- /#footer-end -->
+		</div><!-- /#footer -->
+	</div><!-- /#page -->
+
+<!-- Footer Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://static.tumblr.com/hugxd2w/s4om61ic8/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="http://static.tumblr.com/hugxd2w/9s2ma0c5p/plugins.min.js"></script>
+<script src="http://static.tumblr.com/hugxd2w/l9Bma0dja/script.min.js"></script>
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+{block:IfGoogleAnalyticsWebPropertyID}
+	<script type="text/javascript">
+		var _gaq=[["_setAccount","{text:Google Analytics Web Property ID}"],["_trackPageview"]];
+		(function(d,t){
+			var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
+			g.async=1;
+	    	g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+	    	s.parentNode.insertBefore(g,s)
+	    }(document,"script"));
+	</script>
+{/block:IfGoogleAnalyticsWebPropertyID}
+
+{block:IfGetClickySiteID}
+	<script type="text/javascript">
+		var clicky = { log: function(){ return; }, goal: function(){ return; }};
+		var clicky_site_id = {text:GetClicky Site ID};
+		(function() {
+		  var s = document.createElement('script');
+		  s.type = 'text/javascript';
+		  s.async = true;
+		  s.src = ( document.location.protocol == 'https:' ? 'https://static.getclicky.com/js' : 'http://static.getclicky.com/js' );
+		  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+		})();
+	</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/{text:GetClicky Site ID}ns.gif" /></p></noscript>
+{/block:IfGetClickySiteID}
+</body>
+</html>
